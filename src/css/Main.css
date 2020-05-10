@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:"p p"
+                        "s s";
+    height: 1000px;
+}
+
+main > section.blocos{
+    grid-area: p;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.466); 
+}
+main > section.blocos > div{
+    background: rgb(16, 202, 146);
+    width: 250px;
+    height: 150px;
+    margin-left: 8px;
+}
+
+main > section.linha{
+    grid-area: s;
+    background: rgb(16, 202, 146);
+}

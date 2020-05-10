@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+section.parallax-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items : center;
+    height: 100vh;
+    background: rgb(236, 236, 236);
+    overflow: hidden;
+}
+section.parallax-container > img {
+    position: absolute;
+    top: 0;
+    left : 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section.parallax-container > img#mochila1, img#mochila2{
+    width: 200px;
+    height: 250px;
+    
+}
+section.parallax-container > img#mochila1 {
+    top : 10%;
+    left : 80%;
+    transform: rotate(-25deg);
+}
+section.parallax-container > img#mochila2 {
+    left : 2%;
+    top : 10%;
+    transform: rotate(25deg);
+}
+section.parallax-container:before{
+    content: '';
+    position : absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background : linear-gradient(to top, rgb(236, 236, 236) , transparent);
+    z-index: 1;
+}
+
+section.parallax-container > h2#text {
+    font-family: 'Poppins', sans-serif;
+    color : rgb(15, 145, 106);
+    position: relative;
+    font-size: 10em;
+    top: -90px;
+}
+section.parallax-container > h2#text:before{
+    content: "Art Minas";
+    font-family: 'Poppins', sans-serif;
+    color : rgba(11, 238, 170, 0.795);
+    position: absolute;
+    top : -60%;
+    font-size: 1.1em;
+}
