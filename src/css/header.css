@@ -1,0 +1,131 @@
+header {
+    height: 100px;
+    box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.247);
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0px;
+}
+header > nav > ul {
+    display: flex;
+    position: relative;
+    height: 100px;
+}
+header > nav > ul > li {
+    list-style: none;
+    flex : 1;
+    display: flex;
+}
+header > nav > ul > li > p {
+    text-align: center;
+    align-self: center;
+    flex: 1;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+header img {
+    width: 150px;
+}
+header form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+header form input {
+    height: 30px;
+    width: 200px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.233);
+}
+header form button {
+    height: 30px;
+    width : 30px;
+    background: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.red{
+    background : rgb(255, 0, 0);
+}
+.blue{
+    background: rgba(8, 4, 238, 0.842);
+}
+.purple{
+    background: purple;
+}
+.escuro{
+    background: rgb(15, 145, 106);
+}
+.claro {
+    background: rgb(16, 202, 146);
+}
+
+.hidden-menu{
+    animation: hiddenAnimate .4s;
+    background: rgb(16, 202, 146);
+}
+.show-menu{
+    background: rgb(16, 202, 146);
+    position: fixed;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2000;
+    grid-template-columns: 1fr;
+}
+.show-menu > * {
+    display: none;
+}
+.show-menu > img{
+    display: block;
+    margin : 0 auto;
+    width: 100px;
+}
+.open-menu > *{
+    display: block;
+}
+.open-menu{
+    animation: showAnimation .4s;
+    height: 100px;
+    grid-template-columns: 1.6fr 1fr 1fr;
+}
+.open-menu > img{
+    width: 150px;
+    margin : 0;
+}
+
+@keyframes hiddenAnimate {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -100px, 0);
+    }
+    75% {
+        opacity: .7;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes showAnimation {
+    0% {
+        transform: translate3d(0, -100px, 0);
+        opacity: .2;
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+        opacity: .8;
+    }
+    75% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+    }
+}

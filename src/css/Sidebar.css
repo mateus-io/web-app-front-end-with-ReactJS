@@ -22,7 +22,7 @@ aside > form {
 }
 
 aside:hover{
-    border : 2px solid rgba(248, 39, 39, 0.568);
+    border : 2px solid rgb(15, 145, 106);
 }
 
 aside > form > div input{
@@ -37,24 +37,8 @@ aside > form > div input{
 }
 
 aside > form > div input:focus{
-    outline : 2px solid rgb(241, 25, 25);
+    outline : 2px solid rgb(15, 145, 106);
     transition-duration: .3s;
-}
-
-aside > form > button {
-    height: 60px;
-    background: rgb(241, 25, 25);
-    border: none;
-    font-weight: bolder;
-    color : white;
-    font-size: 1.2em;
-    border-radius: 8px;
-    cursor: pointer;
-    transition-duration: .2s;
-}
-
-aside > form > button:hover {
-    background: rgba(226, 15, 15, 0.897);
 }
 
 aside > form > div.inline {
