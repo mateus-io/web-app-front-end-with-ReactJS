@@ -21,7 +21,6 @@ section.parallax-container > img {
 section.parallax-container > img#mochila1, img#mochila2{
     width: 200px;
     height: 250px;
-    
 }
 section.parallax-container > img#mochila1 {
     top : 10%;

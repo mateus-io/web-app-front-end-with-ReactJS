@@ -22,8 +22,6 @@ export default function SimpleParallax() {
         mochila2.style.transform = `rotate(${value/10}deg)`;
         prateleira.style.top = value * 0.5 + "px";
         text.style.top = value * 1 + "px";
-        text.style.transform = `rotate(${value/10}deg)`;
-
     }
     return (
         <section className="parallax-container">

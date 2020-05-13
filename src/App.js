@@ -4,7 +4,6 @@ import './css/App.css';
 import './css/Sidebar.css';
 import './css/Main.css';
 import './css/footer.css';
-import './css/header.css';
 import logoTwitter from './assets/images/twitter.png';
 import logoFacebook from './assets/images/facebook.png';
 import logoYoutube from './assets/images/youtube.png';
@@ -20,7 +19,7 @@ import ScrollChroma from './components/ScrollChroma';
 
 import AnimationButton from './components/AnimationButton';
 
-import MenuAnimationScroll from './components/MenuAnimationScroll';
+import MenuInterativo from './components/MenuInterativo';
 
 import SimpleParallax from './components/SimpleParallax';
 
@@ -28,8 +27,8 @@ import SimpleParallax from './components/SimpleParallax';
 function App() {
   return (
     <>
-      <MenuAnimationScroll state="claro"/>
       <SimpleParallax/>
+      <MenuInterativo/>
       <ScrollChroma/>
       <div id="app">
         <aside>
