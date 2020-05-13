@@ -15,10 +15,11 @@ export default function MenuAnimationScroll(props) {
 
     const ScrollAnimation = () => {
         const windowTop = window.pageYOffset;
+        let header = document.getElementsByClassName("show-menu")[0];
         if(windowTop < topDistance && windowTop >= 100 && stateClass !== "show-menu"){
              //abrir menu com animação
             setStateClass("show-menu");
-            let header = document.getElementsByClassName("show-menu")[0];
+            
             header.addEventListener('mouseover', () => {
                 header.classList.add("open-menu");
             });
@@ -32,7 +33,8 @@ export default function MenuAnimationScroll(props) {
                 setStateClass("claro");
             }
         }
-        setTopDistance(windowTop);
+        if(windowTop % 100 === 0)
+            setTopDistance(windowTop);
     }
 
     return (
