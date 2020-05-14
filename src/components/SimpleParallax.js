@@ -8,18 +8,19 @@ import background from '../assets/images/background.jpg';
 
 
 import mochila2 from '../assets/images/mochila3.png';
+
 export default function SimpleParallax() {
     const parallax = () => {
         let bg = document.getElementById("background");
-        let mochila2 = document.getElementById("mochila2");
+        let mochila = document.getElementById("mochila2");
         let prateleira = document.getElementById("prateleira");
         let text = document.getElementById("text");
 
         const value = window.scrollY;
 
         bg.style.top = value * 0.5 + "px";
-        mochila2.style.left = value * 0.5 + "px";
-        mochila2.style.transform = `rotate(${value/10}deg)`;
+        mochila.style.left = value * 0.5 + "px";
+        mochila.style.transform = `rotate(${value/10}deg)`;
         prateleira.style.top = value * 0.5 + "px";
         text.style.top = value * 1 + "px";
     }

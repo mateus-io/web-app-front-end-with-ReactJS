@@ -13,6 +13,9 @@ import logoMasterCard from './assets/images/mastercard.png';
 import logoMercadoPago from './assets/images/mercadopago.png';
 import logoVisa from './assets/images/visa.png';
 
+
+
+
 import SlideProductShow from './components/SlideProductShow';
 
 import ScrollChroma from './components/ScrollChroma';
@@ -21,13 +24,18 @@ import AnimationButton from './components/AnimationButton';
 
 import MenuInterativo from './components/MenuInterativo';
 
+import MenuAnimationScroll from './components/MenuAnimationScroll';
+
 import SimpleParallax from './components/SimpleParallax';
+
 
 
 function App() {
   return (
     <>
+      
       <SimpleParallax/>
+      <MenuAnimationScroll/>
       <MenuInterativo/>
       <ScrollChroma/>
       <div id="app">
@@ -81,7 +89,7 @@ function App() {
         </main>
       </div>
       
-      <SlideProductShow/>
+      <SlideProductShow icon="undo"/>
 
       <footer>
         <section>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import SearchInput from './SearchInput';
 
@@ -6,40 +6,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import logoImg from '../assets/images/logo.png';
 
+import '../css/header.css';
+
 
 
 export default function MenuAnimationScroll(props) {
 
-    const [topDistance, setTopDistance] = useState(0);
-    const [stateClass, setStateClass ] = useState(props.state);
+    //const [topDistance, setTopDistance] = useState(0);
+    //const [stateClass, setStateClass ] = useState(props.state);
+    let topDistance = 0; 
 
     const ScrollAnimation = () => {
         const windowTop = window.pageYOffset;
-        let header = document.getElementsByClassName("show-menu")[0];
-        if(windowTop < topDistance && windowTop >= 100 && stateClass !== "show-menu"){
+        let menu = document.getElementsByClassName("menu-container")[0];
+        if(windowTop < topDistance && windowTop >= 100){
              //abrir menu com animação
-            setStateClass("show-menu");
-            
-            header.addEventListener('mouseover', () => {
-                header.classList.add("open-menu");
-            });
+            menu.classList.add("show-menu");
         }
         else{
-            if(windowTop > topDistance && windowTop >= 100 && stateClass !== "hidden-menu"){
+            if(windowTop > topDistance && windowTop >= 100){
                 //descendo com a barra de scroll
-                setStateClass("hidden-menu");
-            }
-            else if(windowTop < 100){
-                setStateClass("claro");
+                menu.classList.remove("show-menu");
+                menu.classList.add("hidden-menu");
+            } else { 
+                menu.classList.remove("show-menu");
+                menu.classList.remove("hidden-menu");
             }
         }
-        if(windowTop % 100 === 0)
-            setTopDistance(windowTop);
+        topDistance = windowTop;
     }
 
     return (
 
-        <header className={stateClass}>
+        <header className="menu-container claro">
             <nav>
                 <ul>
                     <li className="escuro"><p><FontAwesomeIcon icon="home" /></p></li>
