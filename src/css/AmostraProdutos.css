@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 section#amostra-produtos {
     height: 1000px;
     background: #fff;
@@ -5,33 +7,89 @@ section#amostra-produtos {
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.205);
     display : grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+section#amostra-produtos > div.button-card-change{
+    
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+}
+section#amostra-produtos > div.button-card-change > div {
+    font-size: 4em;
+    margin: 0 20px;
+    background: gold;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    border : 5px solid purple;
+    background: linear-gradient(180deg, purple, rgba(8, 8, 165, 0.658));
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.884);
+    color: #fff
+}
+section#amostra-produtos > div.button-card-change > div.arrows {
+    height: 80px;
+    width: 80px;
+    padding: 20px;
+    border : 4px solid purple;
+    cursor: pointer;
+    margin: 20px 20px;
+    background: linear-gradient(180deg, rgba(8, 8, 165, 0.658), purple);
 }
 
 section#amostra-produtos > div:first-child{
     background: purple;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
+section#amostra-produtos > div:first-child > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5em;
+    color: white;
+}
+
 section#amostra-produtos > div.container{
     display : flex;
     justify-content: center;
     align-items: center;
+    max-width: 1000px;
+    position: relative;
     overflow-x: none;
+    margin: 0 auto;
 }
+section#amostra-produtos > div.container > div.first-card{
+    opacity: .3;
+    margin-top: 100px;
+}
+section#amostra-produtos > div.container > div.last-card{
+    opacity: .3;
+    margin-top: 100px;
+}
+
 section#amostra-produtos > div.container > div {
     position: relative;
 }
 
-div.container > div.container-card {
+div.container-card {
     position: relative;
     background: purple;
-    width: 320px;
+    flex: 1;
+    min-width: 320px;
     height: 470px;
     border-radius: 20px;
     overflow:hidden;
     box-shadow : 0 0 20px 1px rgb(0, 0, 0);
+    margin: 0 10px;
 }
 
-div.container > div.container-card:before{
+div.container-card:before{
     content: '';
     position : absolute;
     top : 0;
@@ -43,10 +101,10 @@ div.container > div.container-card:before{
     clip-path : circle(150px at 80% 20%);
     transition : 1s ease-in-out;
 }
-div.container > div.container-card:hover:before{
+div.container-card:hover:before{
     clip-path : circle(220px at 65% 20%);
 }
-div.container > div.container-card:after{
+div.container-card:after{
     content: 'Art';
     position : absolute;
     top : 30%;
@@ -56,7 +114,7 @@ div.container > div.container-card:after{
     font-style: italic;
     color : rgb(114, 69, 156, 0.5);
 }
-div.container > div.container-card > div.img-bx {
+div.container-card > div.img-bx {
     position : absolute;
     top : 50%;
     transform : translateY(-10%);
@@ -66,7 +124,7 @@ div.container > div.container-card > div.img-bx {
     transition : 1s;
 }
 
-div.container > div.container-card > div.content-bx{
+div.container-card > div.content-bx{
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
@@ -74,20 +132,20 @@ div.container > div.container-card > div.content-bx{
     grid-template-rows : repeat(4, 1fr);
     grid-gap: 6px;
 }
-div.container > div.container-card > div.content-bx > div {
+div.container-card > div.content-bx > div {
     display: flex;
     flex-direction : row;
     justify-content: center;
     align-content: center;
     position: relative;
 }
-div.container > div.container-card > div.content-bx > div.color-options > div {
+div.container-card > div.content-bx > div.color-options > div {
     width: 30px;
     margin-left: 10px;
     background: #fff;
     border-radius: 50%;
 }
-div.container > div.container-card > div.content-bx > div.size > div > span{
+div.container-card > div.content-bx > div.size > div > span{
     width: 40px;
     margin-left: 10px;
     background: #fff;
@@ -95,24 +153,24 @@ div.container > div.container-card > div.content-bx > div.size > div > span{
     border-radius: 20%;
     cursor: pointer;
 }
-div.container > div.container-card > div.content-bx > div.size > div > span:hover{
+div.container-card > div.content-bx > div.size > div > span:hover{
     background: rgba(5, 5, 145, 0.651);
 }
-div.container > div.container-card > div.content-bx > div.size > h3 {
+div.container-card > div.content-bx > div.size > h3 {
     color : white;
     font-weight: bold;
     font-size : 1.2em;
 }
-div.container > div.container-card > div.content-bx > div.size{
+div.container-card > div.content-bx > div.size{
     transition-duration : 1s;
     transition-delay : .8s;
     transform: translateX(-100%);
 }
 
-div.container > div.container-card:hover > div.content-bx > div.size{
+div.container-card:hover > div.content-bx > div.size{
     transform: translateX(0%);
 }
-div.container > div.container-card > div.content-bx > div.color-options{
+div.container-card > div.content-bx > div.color-options{
     position: relative;
     transform: translateX(-100%);
     transition-duration: .8s;
@@ -120,7 +178,7 @@ div.container > div.container-card > div.content-bx > div.color-options{
     font-size: 1.2em;
     color: white;
 }
-div.container > div.container-card > div.content-bx > div.title-card{
+div.container-card > div.content-bx > div.title-card{
     transform: translateX(100%);
     transition-delay: .2s;
     transition-duration: 1s;
@@ -128,15 +186,15 @@ div.container > div.container-card > div.content-bx > div.title-card{
     font-size: 1em;
     font-weight: bold;
 }
-div.container > div.container-card:hover > div.content-bx > div.color-options{
+div.container-card:hover > div.content-bx > div.color-options{
     transform: translateX(0%);
 }
 
-div.container > div.container-card:hover > div.content-bx > div.title-card{
+div.container-card:hover > div.content-bx > div.title-card{
     transform: translateX(0%);
 }
 
-div.container > div.container-card > div.content-bx > div.button-submit > button {
+div.container-card > div.content-bx > div.button-submit > button {
     border : none;
     width: 100%;
     background: white;
@@ -151,20 +209,135 @@ div.container > div.container-card > div.content-bx > div.button-submit > button
     transition-delay : 1s;
     transform: translateY(160%);
 }
-div.container > div.container-card:hover > div.content-bx > div.button-submit > button {
+div.container-card:hover > div.content-bx > div.button-submit > button {
     transform: translateY(0%);
     box-shadow: 0 0 70px 20px rgba(4, 21, 253, 0.233);
 }
 
-div.container > div.container-card:hover > div.img-bx {
+div.container-card:hover > div.img-bx {
     top: 0%;
     transform : translateY(0%);
 }
 
-div.container > div.container-card:hover > div.img-bx > img {
+div.container-card:hover > div.img-bx > img {
     position : absolute;
     top : 20%;
     left : 50%;
     transform : translate(-50%, -10%) rotate(-25deg);
     width : 250px;
+    height: 320px;
+}
+div.container-card:hover{
+    margin: 0 100px;
+}
+
+@keyframes rotate-left {
+    0% {
+        box-shadow: 0 0 20px 10px darkblue;
+        transform: rotate(0deg);
+    }
+    25% {
+        box-shadow: 0 0 20px 10px rgb(1, 1, 202);
+        transform: rotate(-90deg);
+    }
+    50%{
+        box-shadow: 0 0 20px 10px rgb(5, 5, 231);
+        transform: rotate(-180deg);
+    }
+    75% {
+        box-shadow: 0 0 20px 10px rgb(41, 41, 255);
+        transform: rotate(-270deg);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px blueviolet;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate-right {
+    0% {
+        box-shadow: 0 0 20px 10px darkblue;
+        transform: rotate(0deg);
+    }
+    25% {
+        box-shadow: 0 0 20px 10px rgb(1, 1, 202);
+        transform: rotate(90deg);
+    }
+    50%{
+        box-shadow: 0 0 20px 10px rgb(5, 5, 231);
+        transform: rotate(180deg);
+    }
+    75% {
+        box-shadow: 0 0 20px 10px rgb(41, 41, 255);
+        transform: rotate(270deg);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px blueviolet;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hand-left {
+    0%, 75% {
+        transform: translateX(-30px);
+    }
+    25%, 100% {
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(30px);
+    }
+}
+@keyframes hand-right {
+    0%, 75% {
+        transform: translateX(30px);
+    }
+    25%, 100% {
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes prox-card {
+    0%{
+        transform: translateX(160px);
+    }
+    50% {
+        opacity: .7;
+        margin-top: 100px;
+        transform: translateX(320px);
+    }
+}
+@keyframes ant-card {
+    0%{
+        transform: translateX(-160px);
+    }
+    50% {
+        opacity: .7;
+        margin-top: 100px;
+        transform: translateX(-320px);
+    }
+}
+
+@keyframes prox-main {
+    0%{
+        transform: translateX(-160px);
+    }
+    50% {
+        opacity: 1;
+        margin-top: -100px;
+        transform: translateX(-320px);
+    }
+}
+@keyframes ant-main {
+    0%{
+        transform: translateX(160px);
+    }
+    50% {
+        opacity: 1;
+        margin-top: -100px;
+        transform: translateX(320px);
+    }
 }

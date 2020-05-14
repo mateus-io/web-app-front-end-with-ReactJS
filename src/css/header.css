@@ -1,22 +1,25 @@
-header {
-    height: 100px;
+header.menu-container {
+    height: 70px;
+    width: 100%;
     box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.247);
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 0px;
 }
-header > nav > ul {
+header.menu-container > nav > ul {
     display: flex;
     position: relative;
-    height: 100px;
+    height: 70px;
+    align-items: flex-start;
 }
-header > nav > ul > li {
+header.menu-container > nav > ul > li {
     list-style: none;
     flex : 1;
     display: flex;
+    height: 100%;
 }
-header > nav > ul > li > p {
+header.menu-container > nav > ul > li > p {
     text-align: center;
     align-self: center;
     flex: 1;
@@ -24,23 +27,23 @@ header > nav > ul > li > p {
     font-weight: bolder;
     font-size: 1.8em;
 }
-header img {
-    width: 150px;
+header.menu-container img {
+    width: 100px;
 }
-header form {
+header.menu-container form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-self: center;
+    align-items: center;
 }
-header form input {
+header.menu-container form input {
     height: 30px;
     width: 200px;
     font-weight: bolder;
     font-size: 1.2em;
     color: rgba(0, 0, 0, 0.233);
 }
-header form button {
+header.menu-container form button {
     height: 30px;
     width : 30px;
     background: white;
@@ -60,43 +63,18 @@ header form button {
 .escuro{
     background: rgb(15, 145, 106);
 }
-.claro {
+header.claro {
     background: rgb(16, 202, 146);
 }
 
-.hidden-menu{
+header.hidden-menu{
     animation: hiddenAnimate .4s;
     background: rgb(16, 202, 146);
+    opacity: 0;
 }
-.show-menu{
-    background: rgb(16, 202, 146);
-    position: fixed;
-    top : 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    z-index: 2000;
-    grid-template-columns: 1fr;
-}
-.show-menu > * {
-    display: none;
-}
-.show-menu > img{
-    display: block;
-    margin : 0 auto;
-    width: 100px;
-}
-.open-menu > *{
-    display: block;
-}
-.open-menu{
+header.show-menu{
     animation: showAnimation .4s;
-    height: 100px;
-    grid-template-columns: 1.6fr 1fr 1fr;
-}
-.open-menu > img{
-    width: 150px;
-    margin : 0;
+    opacity: 1;
 }
 
 @keyframes hiddenAnimate {
@@ -104,13 +82,15 @@ header form button {
         transform: translate3d(0, 0, 0);
     }
     50% {
-        transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -25px, 0);
     }
     75% {
+        transform: translate3d(0, -75px, 0);
         opacity: .7;
     }
     100%{
-        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+        opacity: .3;
     }
 }
 @keyframes showAnimation {

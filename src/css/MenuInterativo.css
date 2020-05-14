@@ -20,7 +20,7 @@ header {
 header > nav > ul > li.menu {
     list-style-type: none;
     color: white;
-    margin: 40px 60px;
+    margin: 80px 60px;
     margin-bottom: 10px;
     font-size: 2em;
     background: rgba(0, 250, 175, 0.863);
@@ -40,7 +40,7 @@ header > nav > ul > li.items {
     color: white;
     list-style-type: none;
     right: 180px;
-    top: 90px;
+    top: 110px;
     position: absolute;
     padding: 10px 20px;
     font-family:'Poppins', sans-serif;
@@ -66,39 +66,32 @@ header > nav > ul > li.close:hover {
 }
 
 header > nav > ul > li.first{
-    top: 20px;
+    top: 40px;
     right: 200px;
     
 }
 header > nav > ul > li.last{
     right: 80px;
-    top : 160px;
+    top : 180px;
 }
 header > nav > ul > li.close{
     right: -10px;
-    top : 180px;
+    top : 200px;
     background: rgba(255, 0, 0, 0.445);
     border: 1px solid rgb(253, 39, 39);
     transform: rotate(270deg);
 }
-header > nav > ul > li.on-select{
-    transition: .5s;
-}
 header > nav > ul > li:before{
     content: attr(data-text);
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 0px;
     font-size: 4em;
     color: rgba(128, 128, 128, 0.616);
     transform: translate(-50%, -50%);
     opacity: 0;
 }
-header > nav > ul > li.on-select:hover {
-    transform: scale(1.4);
-    z-index: 5;
-    background: green;
-}
+
 @keyframes third {
     0% {
         top : 100px;
@@ -110,8 +103,8 @@ header > nav > ul > li.on-select:hover {
         box-shadow: 0 0 100px 10px purple;
     }
     50% {
-        right: 80px;
-        top : 160px;
+        right: 100px;
+        top : 180px;
     }
 }
 
@@ -126,8 +119,8 @@ header > nav > ul > li.on-select:hover {
         box-shadow: 0 0 100px 10px orange;
     }
     50% {
-        right: 180px;
-        top: 90px;
+        right: 200px;
+        top: 110px;
     }
 }
 
@@ -142,8 +135,8 @@ header > nav > ul > li.on-select:hover {
         box-shadow: 0 0 100px 10px greenyellow;
     }
     50% {
-        top: 20px;
-        right: 200px;
+        top: 40px;
+        right: 220px;
     }
 }
 
@@ -159,14 +152,14 @@ header > nav > ul > li.on-select:hover {
     }
     50% {
         right: -10px;
-        top : 180px;
+        top : 200px;
     }
 }
 
 @keyframes third-return {
     0% {
         right: 80px;
-        top : 160px;
+        top : 180px;
     }
     50% {
         top : 100px;
@@ -181,7 +174,7 @@ header > nav > ul > li.on-select:hover {
 @keyframes second-return {
     0% {
         right: 180px;
-        top: 90px;
+        top: 110px;
     }
     50% {
         top : 100px;
@@ -195,7 +188,7 @@ header > nav > ul > li.on-select:hover {
 
 @keyframes first-return {
     0% {
-        top: 20px;
+        top: 40px;
         right: 200px;
     }
     50% {
@@ -211,7 +204,7 @@ header > nav > ul > li.on-select:hover {
 @keyframes close-return {
     0% {
         right: -10px;
-        top : 180px;
+        top : 200px;
     }
     50% {
         top : 100px;
