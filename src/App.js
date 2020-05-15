@@ -26,19 +26,23 @@ import MenuInterativo from './components/MenuInterativo';
 
 import MenuAnimationScroll from './components/MenuAnimationScroll';
 
-import SimpleParallax from './components/SimpleParallax';
+//import SimpleParallax from './components/SimpleParallax';
 
 
 import AwesomeSilder from './components/AwesomeSlider';
 
 import CommentsContainer from './components/CommentsContainer';
 
+import CloudAnimation from './components/CloudAnimation';
+
+import CurveContainer from './components/CurveContainer';
+
 
 function App() {
   return (
     <>
       
-      <SimpleParallax/>
+      <CloudAnimation/>
       <MenuAnimationScroll/>
       <MenuInterativo/>
       <ScrollChroma/>
@@ -97,6 +101,7 @@ function App() {
       <AwesomeSilder/>
 
       <CommentsContainer/>
+      <CurveContainer/>
       <footer>
         <section>
           <div className="menores-esq">

@@ -1,0 +1,78 @@
+div.banner {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: url('../assets/images/background1.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+div.banner:before{
+    content: '';
+    position : absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background : linear-gradient(to top, rgb(236, 236, 236) , transparent);
+    z-index: 1;
+}
+div.banner > h1 {
+    font-family: 'Poppins', sans-serif;
+    color : #FFDD1B;
+    position: relative;
+    font-size: 10em;
+    top: -90px;
+    animation: text-animation 8s linear infinite;
+}
+@keyframes text-animation {
+    0% {
+        transform: translateX(-100%);
+        opacity: .2;
+    }
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+        color: transparent;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    100% {
+        transform: translateY(100%);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+div.banner > h1:hover {
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+}
+div.banner div.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.banner div.clouds > img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloudAnimate 8s linear infinite;
+}
+
+@keyframes cloudAnimate {
+    0% {
+        transform:translateX(-100%);
+    }
+    100% {
+        transform:translateX(100%);
+    }
+}
+
+
+
+

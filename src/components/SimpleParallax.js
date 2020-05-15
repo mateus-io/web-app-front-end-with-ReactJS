@@ -5,7 +5,6 @@ import '../css/SimpleParallax.css';
 
 import backpacker3 from '../assets/images/background.jpg';
 
-
 import mochila2 from '../assets/images/mochila3.png';
 
 export default function SimpleParallax() {
