@@ -6,7 +6,9 @@ section.parallax-container{
     justify-content: center;
     align-items : center;
     height: 100vh;
+    width : 100%;
     background: rgb(236, 236, 236);
+    background-size: cover;
     overflow: hidden;
 }
 section.parallax-container > img {

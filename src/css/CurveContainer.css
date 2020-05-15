@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+section.container-curve {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(180deg, #008aff, #ff1 ), url('../assets/images/sport-bg.png');
+    background-blend-mode: screen;
+}
+
+section.container-curve > div.content {
+    max-width: 700px;
+    z-index: 1000;
+}
+section.container-curve > div.content > h2 {
+    color: black;
+    font-size: 4em;
+    font-family: 'Poppins', sans-serif;
+}
+section.container-curve > div.content > p {
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+section.container-curve> img {
+    position: relative;
+    max-width: 450px;
+    z-index: 1000;
+}
+section.container-curve > svg.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
