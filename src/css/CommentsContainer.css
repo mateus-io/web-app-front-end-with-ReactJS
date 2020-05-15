@@ -1,0 +1,11 @@
+div.comments-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    min-height: 500px;
+    background: transparent;
+    box-shadow : 0 0 14px 0 rgba(0, 0, 0, 0);
+    flex-wrap: wrap;
+    margin: 0 auto;
+}

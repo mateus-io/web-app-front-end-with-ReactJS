@@ -29,6 +29,10 @@ import MenuAnimationScroll from './components/MenuAnimationScroll';
 import SimpleParallax from './components/SimpleParallax';
 
 
+import AwesomeSilder from './components/AwesomeSlider';
+
+import CommentsContainer from './components/CommentsContainer';
+
 
 function App() {
   return (
@@ -90,7 +94,9 @@ function App() {
       </div>
       
       <SlideProductShow icon="undo"/>
+      <AwesomeSilder/>
 
+      <CommentsContainer/>
       <footer>
         <section>
           <div className="menores-esq">

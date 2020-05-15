@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+div.container-comment-card{
+    position: relative;
+    width: 125%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0 -30px;
+    margin-top: -35px;
+    box-shadow: 0 0 40px 80px rgba(0, 0, 0, 0);
+    transform-style: preserve-3d;
+    
+}
+div.container-comment-card  div.box{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin: 0 0;
+    background: #000;
+    transform-style: preserve-3d;
+}
+
+div.container-comment-card  div.box > div.img-bx {
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+div.container-comment-card  div.box > div.img-bx > img {
+    width: 100%;
+    height: 100%;
+}
+
+div.container-comment-card  div.box > div.content-bx {
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    right: 50%;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    padding: 40px 25px;
+    transform-origin: top;
+    transform: translateZ(20px) scaleY(0);
+    transform-style: preserve-3d;
+    transition: .5s;
+    border-radius: 2px;
+}
+div.container-comment-card  div.box:hover > div.content-bx{
+    transform: translateZ(20px) scaleY(1);
+    box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.445);
+    
+}
+div.container-comment-card  div.box:hover{
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.445);
+}
