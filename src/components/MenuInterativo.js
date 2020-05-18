@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function MenuInterativo() {
     
     const rotationAnimation = () => {
-        let menu = document.getElementsByClassName("menu")[0];
         let items = document.getElementsByClassName("items");
         for(let i = 0; i < items.length; i++)
             items[i].style.display = "block";
@@ -36,7 +35,7 @@ export default function MenuInterativo() {
         }, 700);
     }
     return (
-        <header>
+        <header className="menu-interativo">
             <nav>
                 <ul>
                     <li onMouseOver={ rotationAnimation }  className="menu"><p><FontAwesomeIcon icon="home" /></p></li>

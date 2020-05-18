@@ -14,23 +14,25 @@ export default function MenuAnimationScroll(props) {
 
     //const [topDistance, setTopDistance] = useState(0);
     //const [stateClass, setStateClass ] = useState(props.state);
-    let topDistance = 0; 
+    let topDistance = 0;
 
     const ScrollAnimation = () => {
         const windowTop = window.pageYOffset;
         let menu = document.getElementsByClassName("menu-container")[0];
-        if(windowTop < topDistance && windowTop >= 100){
-             //abrir menu com animação
-            menu.classList.add("show-menu");
-        }
-        else{
-            if(windowTop > topDistance && windowTop >= 100){
-                //descendo com a barra de scroll
-                menu.classList.remove("show-menu");
-                menu.classList.add("hidden-menu");
-            } else { 
-                menu.classList.remove("show-menu");
-                menu.classList.remove("hidden-menu");
+        if (windowTop !== topDistance) {
+            if (windowTop < topDistance && windowTop >= 100) {
+                //abrir menu com animação
+                menu.classList.add("show-menu");
+            }
+            else {
+                if (windowTop > topDistance && windowTop >= 100) {
+                    //descendo com a barra de scroll
+                    menu.classList.remove("show-menu");
+                    menu.classList.add("hidden-menu");
+                } else {
+                    menu.classList.remove("show-menu");
+                    menu.classList.remove("hidden-menu");
+                }
             }
         }
         topDistance = windowTop;
@@ -50,7 +52,7 @@ export default function MenuAnimationScroll(props) {
             <img src={logoImg} alt="logo"></img>
             <SearchInput value="search" />
 
-            { window.addEventListener('scroll', ScrollAnimation ) }
+            {window.addEventListener('scroll', ScrollAnimation)}
         </header>
     );
 }

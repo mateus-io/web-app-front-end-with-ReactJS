@@ -6,6 +6,11 @@ header.menu-container {
     grid-template-columns: 1.6fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 0px;
+    position: absolute;
+    top : 0;
+    right: 0;
+    position: fixed;
+    z-index: 4;
 }
 header.menu-container > nav > ul {
     display: flex;
@@ -106,6 +111,7 @@ header.show-menu{
         opacity: .9;
     }
     100% {
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }

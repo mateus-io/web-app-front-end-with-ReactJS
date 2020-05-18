@@ -1,29 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 main {
+    flex: 1;
+}
+
+ul.student-container {
     display: grid;
-    grid-template-rows: 3fr 1fr;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:"p p"
-                        "s s";
-    height: 1000px;
-}
-
-main > section.blocos{
-    grid-area: p;
-    background: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-gap: 20px;
+    max-width: 1000px;
+    background: transparent;
     align-items: center;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.466); 
-}
-main > section.blocos > div{
-    background: rgb(16, 202, 146);
-    width: 250px;
-    height: 150px;
-    margin-left: 8px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
-main > section.linha{
-    grid-area: s;
-    background: rgb(16, 202, 146);
+li.student-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, .4);
+    border-radius: 20px;
+    background: white
+}
+li.student-item:hover {
+    box-shadow: 0 0 20px 2px rgba(15, 145, 106, 0.548);
+    border: 1px solid rgb(15, 145, 106);
+}
+li.student-item > header {
+    display: flex;
+    align-items: center;
+}
+li.student-item > header .student-info{
+    margin-left: 10px;
+}
+.student-info strong {
+    display: block;
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.692);
+    font-family: 'Poppins', sans-serif;
+}
+.student-info span {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+li.student-item p {
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+li.student-item a {
+    color: rgb(15, 145, 106);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+li.student-item a:hover {
+    color: rgb(10, 214, 153);
+}
+
+li.student-item > header > img {
+    position: relative;
+    width: 65px;
+    height: 60px;
+    border-radius: 30%;
+    margin: 10px 0;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.13);
+}
+
+@media (max-width : 600px) {
+    ul.student-container{
+        grid-template-columns: 1fr;
+    }
 }
