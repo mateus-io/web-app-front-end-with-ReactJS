@@ -7,6 +7,12 @@ aside {
     padding-top: 30px;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
 }
+@media (max-width : 1000px) {
+    aside {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
 aside > strong {
     font-size: 1.3em;
 }
