@@ -33,8 +33,6 @@ import StudentCard from './components/StudentCard';
 
 import FormStudent from './components/FormStudent';
 
-
-
 function App() {
   const [students, setStudents] = useState([]);
   

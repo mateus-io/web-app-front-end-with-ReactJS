@@ -8,6 +8,9 @@ import logoImg from '../assets/images/logo.png';
 
 import '../css/header.css';
 
+//handling with routes without refresh
+import { Link } from 'react-router-dom';
+
 
 
 export default function MenuAnimationScroll(props) {
@@ -43,10 +46,26 @@ export default function MenuAnimationScroll(props) {
         <header className="menu-container claro">
             <nav>
                 <ul>
-                    <li className="escuro"><p><FontAwesomeIcon icon="home" /></p></li>
-                    <li className="claro"><p><FontAwesomeIcon icon="cart-plus" /></p></li>
-                    <li className="escuro"><p><FontAwesomeIcon icon="book-reader" /></p></li>
-                    <li className="claro"><p><FontAwesomeIcon icon="phone-alt" /></p></li>
+                    <Link className="flex-link" to="/">
+                        <li className="escuro">
+                            <p><FontAwesomeIcon icon="home" /></p>
+                        </li>
+                    </Link>
+                    <Link className="flex-link" to="/buy">
+                        <li className="claro">
+                            <p><FontAwesomeIcon icon="cart-plus" /></p>
+                        </li>
+                    </Link>
+                    <Link className="flex-link" to="/about">
+                        <li className="escuro">
+                            <p><FontAwesomeIcon icon="book-reader" /></p>
+                        </li>
+                    </Link>
+                    <Link className="flex-link" to="*">
+                        <li className="claro">
+                            <p><FontAwesomeIcon icon="phone-alt" /></p>
+                        </li>
+                    </Link>
                 </ul>
             </nav>
             <img src={logoImg} alt="logo"></img>

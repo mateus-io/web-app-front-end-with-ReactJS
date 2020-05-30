@@ -17,7 +17,7 @@ header.menu-interativo {
     position: fixed;
     z-index: 4;
 }
-header.menu-interativo > nav > ul > li.menu {
+header.menu-interativo > nav > ul li.menu {
     list-style-type: none;
     color: white;
     margin: 80px 60px;
@@ -29,12 +29,12 @@ header.menu-interativo > nav > ul > li.menu {
     padding: 10px;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.322); 
 }
-header.menu-interativo > nav > ul > li.menu:hover {
+header.menu-interativo > nav > ul li.menu:hover {
     background : rgba(0, 250, 175, 0.863);
     animation: rotate 1s;
 }
 
-header.menu-interativo > nav > ul > li.items {
+header.menu-interativo > nav > ul li.items {
     background: rgba(0, 250, 175, 0.438);
     font-size: 1.5em;
     color: white;
@@ -50,38 +50,38 @@ header.menu-interativo > nav > ul > li.items {
     box-shadow: 0 0 14px 0px rgba(0, 0, 0, 0.363);
     transition: .5s;
 }
-header.menu-interativo > nav > ul > li.items:hover:before {
+header.menu-interativo > nav > ul li.items:hover:before {
     opacity: 1;
 }
-header.menu-interativo > nav > ul > li.items:hover {
+header.menu-interativo > nav > ul li.items:hover {
     transform: scale(1.4);
     z-index: 5;
     background: green;
 }
-header.menu-interativo > nav > ul > li.close:hover {
+header.menu-interativo > nav > ul li.close:hover {
     transform: scale(1.4);
     z-index: 5;
     background: red;
     right: 40px;
 }
 
-header.menu-interativo > nav > ul > li.first{
+header.menu-interativo > nav > ul li.first{
     top: 40px;
     right: 200px;
     
 }
-header.menu-interativo > nav > ul > li.last{
+header.menu-interativo > nav > ul li.last{
     right: 80px;
     top : 180px;
 }
-header.menu-interativo > nav > ul > li.close{
+header.menu-interativo > nav > ul li.close{
     right: -10px;
     top : 200px;
     background: rgba(255, 0, 0, 0.445);
     border: 1px solid rgb(253, 39, 39);
     transform: rotate(270deg);
 }
-header.menu-interativo > nav > ul > li:before{
+header.menu-interativo > nav > ul li:before{
     content: attr(data-text);
     position: absolute;
     top: 40px;
