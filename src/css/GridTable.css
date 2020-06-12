@@ -1,0 +1,50 @@
+.grid-container-cards {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #987;
+}
+
+.card-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-grid-container {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    background: #ddd;
+    color: #123;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+.clicked {
+    animation: 1s animationtest
+}
+@keyframes animationtest{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-250px);
+    }
+    75%{
+        opacity: 0;
+    }
+}
+.red {
+    background: red;
+}
+.green {
+    background: green;
+}
+.blue {
+    background: blue;
+}

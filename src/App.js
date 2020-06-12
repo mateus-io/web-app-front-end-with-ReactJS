@@ -33,6 +33,8 @@ import StudentCard from './components/StudentCard';
 
 import FormStudent from './components/FormStudent';
 
+import GridTable from './components/GridTable';
+
 function App() {
   const [students, setStudents] = useState([]);
   
@@ -55,6 +57,7 @@ function App() {
   }
   return (
     <>
+      
       <CloudAnimation />
       <MenuAnimationScroll/>
       <MenuInterativo />
@@ -77,6 +80,7 @@ function App() {
 
       <CommentsContainer />
       <CurveContainer />
+      <GridTable/>
       <FooterDefault/>
     </>
   );
